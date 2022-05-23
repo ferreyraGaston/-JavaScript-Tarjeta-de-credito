@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>TarjetaPOO</title>
+</head>
+<body>
+<div class="container mt-5">
+<div class="rows">
+<div class="col-8 offset-2">
+    <form id="formulario" class="p-3 mt-5 shadow border">
+        <h2 class="text-center text-primary">TarjetaPOO</h2>
+        <hr><br>
+
+        <input id="importe" class="form-control my-2" type="text" placeholder="Ingres el importe">
+        <br>
+        <p>
+            <label for="tema1">Platinum. (5 %)</label>
+            <input class="my-2" type="radio" value="0.05" id="chech1" name="valores">
+        </p>
+        <p>
+            <label for="tema2">Intermedia. (10 %)</label>
+            <input class="my-2" type="radio" value="0.1" id="chech2" name="valores">
+        </p>
+        <p>
+            <label for="tema3">Black.(15 %)</label>
+            <input class="my-2" type="radio" value="0.15" id="chech3" name="valores">
+        </p>
+        <br>
+        <input id="cuota" class="form-control my-2" type="text" placeholder="Ingres el Numero de cuotas">
+        <br>
+        <button class="btn btn-primary mt-2" type="submit">Mostrar Datos</button>
+
+
+    </form>
+    <hr>
+    <h3 id="respuesta" class="text-center fw-ligth"></h3>
+    <h3 id="respuesta2" class="text-center fw-ligth"></h3>
+</div>
+</div>
+</div>
+<script src =" ./Js/funciones.js " > </script>
+</body>
+</html>
