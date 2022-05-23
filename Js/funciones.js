@@ -1,7 +1,7 @@
 const formulario=document.querySelector("#formulario");
 
 formulario.addEventListener("submit", validarForm)
-
+const activador=0;
 
 function validarForm(e){
     e.preventDefault(); // detiene al navegador para que se lo pueda visualizar
@@ -16,19 +16,23 @@ function validarForm(e){
         check3: document.querySelector("#chech3").checked,
 
     }
-    const activador=0;
+    
 
     if(TarjetaPOO.check1==true){
-        activado= parseFloat(document.querySelector("#chech1").value);
+        //activado= parseFloat(document.querySelector("#chech1").value);
+        var importeTotal = parseFloat(TarjetaPOO.importe)+(parseFloat(TarjetaPOO.importe)) * 0.05;
     }
     if(TarjetaPOO.check2==true){
-        activado= parseFloat(document.querySelector("#chech2").value);
+        //activado= parseFloat(document.querySelector("#chech2").value);
+        var importeTotal = parseFloat(TarjetaPOO.importe)+(parseFloat(TarjetaPOO.importe)) * 0.1;
     }
     if(TarjetaPOO.check3==true){
-        activado= parseFloat(document.querySelector("#chech3").value);
+       // activado= parseFloat(document.querySelector("#chech3").value);
+        var importeTotal = parseFloat(TarjetaPOO.importe)+(parseFloat(TarjetaPOO.importe)) * 0.15;
     }
 
-    var importeTotal = parseFloat(TarjetaPOO.importe)+(parseFloat(TarjetaPOO.importe) * activador);
+
+    
 
     var valorCuota = importeTotal / TarjetaPOO.cuota;
 
@@ -40,9 +44,10 @@ function validarForm(e){
 
     console.log(parseFloat(TarjetaPOO.importe));
     console.log(parseFloat(TarjetaPOO.cuota));
-    console.log(activado);
+
     console.log(importeTotal);
     console.log(valorCuota);
+
 
     console.log(TarjetaPOO.check1);
     console.log(TarjetaPOO.check2);
